@@ -2,20 +2,17 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Формы</title>
+    <title>Ползунок</title>
+    <script>
+        function sizePic() {
+            size = document.getElementById("size").value;
+            img = document.getElementById("pic");
+            img.width = 60 + 80 * size;
+        }
+    </script>
 </head>
 <body>
-    <form>
-        <p>
-            <form name="formal">
-                Какими языками вы владеете:<br>
-                <input type="checkbox" name="lan1" value="english" checked>английский
-                <input type="checkbox" name="lan2" value="german">немецкий
-                <input type="checkbox" name="lan3" value="spanish">испанский
-                <input type="checkbox" name="lan4" value="french">французский
-            </form>
-            <input type="submit">
-        </p>
-    </form>
+    <p>Размер рисунка: <input type="range" min="1" max="5" id="size" oninput="sizePic()" value="3"></p>
+    <p><img src="c:\Users\User\Desktop\Adobe Express - file (6) 1.png" alt="" id="pic" width="300"></p>
 </body>
 </html>
